@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>情境式智慧導航系統</title>
+  <meta name="description" content="結合安全、空氣品質、遮蔭等情境的智慧導航系統" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+e2DgZtJcG8+oF6Qb+5bZB5K6pZJ1xjI5uW2bU+gM=" crossorigin="" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="glass-header">
+    <h1>情境式智慧導航系統</h1>
+  </header>
+
+  <main class="container glass-panel">
+    <section class="controls">
+      <div class="input-group">
+        <label for="start">起點：</label>
+        <input type="text" id="start" placeholder="例如：台中火車站" />
+      </div>
+      <div class="input-group">
+        <label for="end">終點：</label>
+        <input type="text" id="end" placeholder="例如：台中大學" />
+      </div>
+      <div class="input-group">
+        <label for="scenario">情境模式：</label>
+        <select id="scenario">
+          <option value="safety">安全優先</option>
+          <option value="air">空氣品質優先</option>
+          <option value="shade">遮蔭優先</option>
+        </select>
+      </div>
+      <button id="searchBtn" class="primary-btn">搜尋路線</button>
+    </section>
+
+    <section id="map" class="map"></section>
+
+    <section class="info-panel" id="infoPanel">
+      <!-- 動態資訊會填入此處 -->
+    </section>
+  </main>
+
+  <footer class="glass-footer">
+    <p>© 2026 情境式智慧導航系統</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o8f9x4+G+Z3EJwV5KQ1YgBzJg5K4uO0w5K6R9M5QxVg=" crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>
